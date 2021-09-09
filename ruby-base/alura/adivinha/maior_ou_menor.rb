@@ -13,9 +13,16 @@ puts "Entre com o numero: "
 chute = gets
 
 puts "Será que acertou? Você chutou #{chute}"
-chute_errrado = chute.to_i == numero_secreto
-if chute_errrado
+
+acertou = chute.to_i == numero_secreto
+
+if acertou
   puts "Parabéns #{nome} você acertou!"
 else
-  puts "Errou! Número correto seria: #{numero_secreto}"
+  maior = numero_secreto > chute.to_i
+  if maior
+    puts 'O número secreto é maior!'
+  else
+    puts 'O número secreto é menor!'
+  end
 end
