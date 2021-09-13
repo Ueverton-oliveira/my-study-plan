@@ -8,12 +8,12 @@ class AboutBlocks < Neo::Koan
 
   def test_methods_can_take_blocks
     yielded_result = method_with_block { 1 + 2 }
-    assert_equal __, yielded_result
+    assert_equal 3, yielded_result
   end
 
   def test_blocks_can_be_defined_with_do_end_too
     yielded_result = method_with_block do 1 + 2 end
-    assert_equal __, yielded_result
+    assert_equal 3, yielded_result
   end
 
   # ------------------------------------------------------------------
@@ -24,7 +24,7 @@ class AboutBlocks < Neo::Koan
 
   def test_blocks_can_take_arguments
     method_with_block_arguments do |argument|
-      assert_equal __, argument
+      assert_equal 'Jim', argument
     end
   end
 
@@ -40,7 +40,7 @@ class AboutBlocks < Neo::Koan
   def test_methods_can_call_yield_many_times
     result = []
     many_yields { |item| result << item }
-    assert_equal __, result
+    assert_equal [:peanut, :butter, :and, :jelly], result
   end
 
   # ------------------------------------------------------------------
