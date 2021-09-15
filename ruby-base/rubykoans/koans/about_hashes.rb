@@ -47,33 +47,33 @@ class AboutHashes < Neo::Koan
     hash1 = { :one => "uno", :two => "dos" }
     hash2 = { :two => "dos", :one => "uno" }
 
-    assert_equal false, hash1 == hash2
+    assert_equal true, hash1 == hash2
   end
 
   def test_hash_keys
     hash = { :one => "uno", :two => "dos" }
-    assert_equal __, hash.keys.size
-    assert_equal __, hash.keys.include?(:one)
-    assert_equal __, hash.keys.include?(:two)
-    assert_equal __, hash.keys.class
+    assert_equal 2, hash.keys.size
+    assert_equal true, hash.keys.include?(:one)
+    assert_equal true, hash.keys.include?(:two)
+    assert_equal Array, hash.keys.class
   end
 
   def test_hash_values
     hash = { :one => "uno", :two => "dos" }
-    assert_equal __, hash.values.size
-    assert_equal __, hash.values.include?("uno")
-    assert_equal __, hash.values.include?("dos")
-    assert_equal __, hash.values.class
+    assert_equal 2, hash.values.size
+    assert_equal true, hash.values.include?("uno")
+    assert_equal true, hash.values.include?("dos")
+    assert_equal Array, hash.values.class
   end
 
   def test_combining_hashes
     hash = { "jim" => 53, "amy" => 20, "dan" => 23 }
     new_hash = hash.merge({ "jim" => 54, "jenny" => 26 })
 
-    assert_equal __, hash != new_hash
+    assert_equal true, hash != new_hash
 
-    expected = { "jim" => __, "amy" => 20, "dan" => 23, "jenny" => __ }
-    assert_equal __, expected == new_hash
+    expected = { "jim" => 54, "amy" => 20, "dan" => 23, "jenny" => 26 }
+    assert_equal true, expected == new_hash
   end
 
   def test_default_value
