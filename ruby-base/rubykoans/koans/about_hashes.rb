@@ -3,20 +3,20 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 class AboutHashes < Neo::Koan
   def test_creating_hashes
     empty_hash = Hash.new
-    assert_equal __, empty_hash.class
-    assert_equal(__, empty_hash)
-    assert_equal __, empty_hash.size
+    assert_equal Hash, empty_hash.class
+    assert_equal({}, empty_hash)
+    assert_equal 0, empty_hash.size
   end
 
   def test_hash_literals
     hash = { :one => "uno", :two => "dos" }
-    assert_equal __, hash.size
+    assert_equal 2, hash.size
   end
 
   def test_accessing_hashes
     hash = { :one => "uno", :two => "dos" }
-    assert_equal __, hash[:one]
-    assert_equal __, hash[:two]
+    assert_equal "uno", hash[:one]
+    assert_equal "dos", hash[:two]
     assert_equal __, hash[:doesnt_exist]
   end
 
