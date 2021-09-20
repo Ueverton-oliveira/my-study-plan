@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f8823c5b-3de3-4d18-a974-b5d112597dc1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.path_progress" beforeDir="false" afterPath="$PROJECT_DIR$/.path_progress" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about_blocks.rb" beforeDir="false" afterPath="$PROJECT_DIR$/about_blocks.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +17,31 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="feat/blocks" />
+                    <option name="lastUsedInstant" value="1632137483" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1632137482" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/../../.." />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="ProjectId" id="1y2CpH6Y3ctAlzcK6TNY68gj5Bk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -46,7 +74,9 @@
       <workItem from="1631444537111" duration="3992000" />
       <workItem from="1631525962064" duration="228000" />
       <workItem from="1631716197779" duration="841000" />
-      <workItem from="1631732302291" duration="2452000" />
+      <workItem from="1631732302291" duration="3596000" />
+      <workItem from="1631735950051" duration="18000" />
+      <workItem from="1632137348149" duration="1346000" />
     </task>
     <servers />
   </component>
