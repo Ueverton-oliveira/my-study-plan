@@ -33,15 +33,17 @@ class AboutMethods < Neo::Koan
   # NOTE: wrong number of arguments is not a SYNTAX error, but a
   # runtime error.
   def test_calling_global_methods_with_wrong_number_of_arguments
-    exception = assert_raise(___) do
+    exception = assert_raise(ArgumentError) do
       my_global_method
     end
-    assert_match(/__/, exception.message)
+    myString = "wrong number of arguments (given 0, expected 2)"
+    assert_match(/#{Regexp.quote(myString)}/ , exception.message)
 
-    exception = assert_raise(___) do
+    exception = assert_raise(ArgumentError) do
       my_global_method(1,2,3)
     end
-    assert_match(/__/, exception.message)
+    myString = "wrong number of arguments (given 3, expected 2)"
+    assert_match(/#{Regexp.quote(myString)}/, exception.message)
   end
 
   # ------------------------------------------------------------------
@@ -62,10 +64,10 @@ class AboutMethods < Neo::Koan
   end
 
   def test_calling_with_variable_arguments
-    assert_equal __, method_with_var_args.class
-    assert_equal __, method_with_var_args
-    assert_equal __, method_with_var_args(:one)
-    assert_equal __, method_with_var_args(:one, :two)
+    assert_equal Array, method_with_var_args.class
+    assert_equal [], method_with_var_args
+    assert_equal [:one], method_with_var_args(:one)
+    assert_equal [:one, :two], method_with_var_args(:one, :two)
   end
 
   # ------------------------------------------------------------------
