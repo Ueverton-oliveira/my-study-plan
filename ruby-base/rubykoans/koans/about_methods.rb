@@ -79,7 +79,7 @@ class AboutMethods < Neo::Koan
   end
 
   def test_method_with_explicit_return
-    assert_equal __, method_with_explicit_return
+    assert_equal :return_value, method_with_explicit_return
   end
 
   # ------------------------------------------------------------------
@@ -90,7 +90,7 @@ class AboutMethods < Neo::Koan
   end
 
   def test_method_without_explicit_return
-    assert_equal __, method_without_explicit_return
+    assert_equal :return_value, method_without_explicit_return
   end
 
   # ------------------------------------------------------------------
@@ -100,11 +100,11 @@ class AboutMethods < Neo::Koan
   end
 
   def test_calling_methods_in_same_class
-    assert_equal __, my_method_in_the_same_class(3,4)
+    assert_equal 12, my_method_in_the_same_class(3,4)
   end
 
   def test_calling_methods_in_same_class_with_explicit_receiver
-    assert_equal __, self.my_method_in_the_same_class(3,4)
+    assert_equal 12, self.my_method_in_the_same_class(3,4)
   end
 
   # ------------------------------------------------------------------
@@ -115,15 +115,15 @@ class AboutMethods < Neo::Koan
   private :my_private_method
 
   def test_calling_private_methods_without_receiver
-    assert_equal __, my_private_method
+    assert_equal "a secret", my_private_method
   end
 
   if before_ruby_version("2.7")   # https://github.com/edgecase/ruby_koans/issues/12
     def test_calling_private_methods_with_an_explicit_receiver
-      exception = assert_raise(___) do
+      exception = assert_raise(NoMethodError) do
         self.my_private_method
       end
-      assert_match /__/, exception.message
+      assert_match /#{("method `my_private_method'")}/, exception.message
     end
   end
 
@@ -143,12 +143,12 @@ class AboutMethods < Neo::Koan
 
   def test_calling_methods_in_other_objects_require_explicit_receiver
     rover = Dog.new
-    assert_equal __, rover.name
+    assert_equal "Fido", rover.name
   end
 
   def test_calling_private_methods_in_other_objects
     rover = Dog.new
-    assert_raise(___) do
+    assert_raise(NoMethodError) do
       rover.tail
     end
   end
