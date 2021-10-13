@@ -6,7 +6,7 @@ class AboutClasses < Neo::Koan
 
   def test_instances_of_classes_can_be_created_with_new
     fido = Dog.new
-    assert_equal __, fido.class
+    assert_equal Dog, fido.class
   end
 
   # ------------------------------------------------------------------
@@ -19,7 +19,7 @@ class AboutClasses < Neo::Koan
 
   def test_instance_variables_can_be_set_by_assigning_to_them
     fido = Dog2.new
-    assert_equal __, fido.instance_variables
+    assert_equal fido.set_name(name), fido.instance_variables
 
     fido.set_name("Fido")
     assert_equal __, fido.instance_variables
