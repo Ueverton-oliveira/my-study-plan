@@ -19,10 +19,14 @@ class AboutClasses < Neo::Koan
 
   def test_instance_variables_can_be_set_by_assigning_to_them
     fido = Dog2.new
-    assert_equal fido.set_name(name), fido.instance_variables
+    ##assert_equal __, fido.instance_variables
+    assert_equal [], fido.instance_variables
+    # The .instance_variables method on a class returns an array of all the declared instance variables. Since, the
+    # fido object has yet to call the set_name() method there are no instance methods declared yet
 
     fido.set_name("Fido")
-    assert_equal __, fido.instance_variables
+    ##assert_equal __, fido.instance_variables
+    assert_equal [:@name], fido.instance_variables
   end
 
   def test_instance_variables_cannot_be_accessed_outside_the_class
