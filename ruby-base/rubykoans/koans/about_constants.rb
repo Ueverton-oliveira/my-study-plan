@@ -63,7 +63,7 @@ class AboutConstants < Neo::Koan
   end
 
   def test_who_wins_with_both_nested_and_inherited_constants
-    assert_equal __, MyAnimals::Bird.new.legs_in_bird
+    assert_equal 2, MyAnimals::Bird.new.legs_in_bird
   end
 
   # QUESTION: Which has precedence: The constant in the lexical scope,
@@ -78,7 +78,7 @@ class AboutConstants < Neo::Koan
   end
 
   def test_who_wins_with_explicit_scoping_on_class_definition
-    assert_equal __, MyAnimals::Oyster.new.legs_in_oyster
+    assert_equal 4, MyAnimals::Oyster.new.legs_in_oyster
   end
 
   # QUESTION: Now which has precedence: The constant in the lexical
