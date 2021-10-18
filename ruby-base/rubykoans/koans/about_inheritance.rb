@@ -77,7 +77,7 @@ class AboutInheritance < Neo::Koan
 
   def test_super_does_not_work_cross_method
     george = GreatDane.new("George")
-    assert_raise() do
+    assert_raise(NoMethodError) do
       george.growl
     end
   end
