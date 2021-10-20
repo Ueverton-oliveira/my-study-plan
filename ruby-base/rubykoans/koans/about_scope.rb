@@ -29,8 +29,8 @@ class AboutScope < Neo::Koan
     assert_equal :jims_dog, fido.identify
     assert_equal :joes_dog, rover.identify
 
-    assert_equal , fido.class != rover.class
-    assert_equal , Jims::Dog != Joes::Dog
+    assert_equal true, fido.class != rover.class
+    assert_equal true, Jims::Dog != Joes::Dog
   end
 
   # ------------------------------------------------------------------
