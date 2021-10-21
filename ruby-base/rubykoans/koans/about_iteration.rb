@@ -24,7 +24,7 @@ class AboutIteration < Neo::Koan
   # -------------------------------------------------------------------
 
   def test_each_is_a_method_on_arrays
-    assert_equal __, [].methods.include?(as_name(:each))
+    assert_equal true, [].methods.include?(as_name(:each))
   end
 
   def test_iterating_with_each
