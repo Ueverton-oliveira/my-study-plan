@@ -71,13 +71,13 @@ class AboutIteration < Neo::Koan
 
     # NOTE: 'find_all' is another name for the 'select' operation
     more_even_numbers = array.find_all { |item| (item % 2) == 0 }
-    assert_equal __, more_even_numbers
+    assert_equal [2, 4, 6], more_even_numbers
   end
 
   def test_find_locates_the_first_element_matching_a_criteria
     array = ["Jim", "Bill", "Clarence", "Doug", "Eli"]
 
-    assert_equal __, array.find { |item| item.size > 4 }
+    assert_equal 'Clarence', array.find { |item| item.size > 4 }
   end
 
   def test_inject_will_blow_your_mind
