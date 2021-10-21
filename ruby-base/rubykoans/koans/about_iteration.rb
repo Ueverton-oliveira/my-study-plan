@@ -50,17 +50,17 @@ class AboutIteration < Neo::Koan
       break if item > 3
       sum += item
     end
-    assert_equal __, sum
+    assert_equal 6, sum
   end
 
   def test_collect_transforms_elements_of_an_array
     array = [1, 2, 3]
     new_array = array.collect { |item| item + 10 }
-    assert_equal __, new_array
+    assert_equal [11, 12 13], new_array
 
     # NOTE: 'map' is another name for the 'collect' operation
     another_array = array.map { |item| item + 10 }
-    assert_equal __, another_array
+    assert_equal [11, 12 13], another_array
   end
 
   def test_select_selects_certain_items_from_an_array
