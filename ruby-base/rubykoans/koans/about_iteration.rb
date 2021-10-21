@@ -85,7 +85,7 @@ class AboutIteration < Neo::Koan
     assert_equal 9, result
 
     result2 = [2, 3, 4].inject(1) { |product, item| product * item }
-    assert_equal [2, 3, 4], result2
+    assert_equal 24, result2
 
     # Extra Credit:
     # Describe in your own words what inject does.
@@ -94,7 +94,7 @@ class AboutIteration < Neo::Koan
   def test_all_iteration_methods_work_on_any_collection_not_just_arrays
     # Ranges act like a collection
     result = (1..3).map { |item| item + 10 }
-    assert_equal __, result
+    assert_equal [11, 12, 13], result
 
     # Files act like a collection of lines
     File.open("example_file.txt") do |file|
