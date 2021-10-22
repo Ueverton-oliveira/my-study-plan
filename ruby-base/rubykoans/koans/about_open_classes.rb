@@ -36,7 +36,7 @@ class AboutOpenClasses < Neo::Koan
   end
 
   def test_even_existing_built_in_classes_can_be_reopened
-    assert_equal __, 1.even?
+    assert_equal false, 1.even?
     assert_equal __, 2.even?
   end
 
