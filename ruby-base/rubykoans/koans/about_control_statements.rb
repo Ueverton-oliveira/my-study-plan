@@ -77,7 +77,7 @@ class AboutControlStatements < Neo::Koan
     result = :default_value
     result = :false_value unless false
 
-    assert_equal __, result
+    assert_equal :false_value, result
   end
 
   def test_while_statement
@@ -87,7 +87,7 @@ class AboutControlStatements < Neo::Koan
       result = result * i
       i += 1
     end
-    assert_equal __, result
+    assert_equal (1..10).inject {|a,b| a*=b}, result
   end
 
   def test_break_statement

@@ -27,16 +27,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feat/class" />
-                    <option name="lastUsedInstant" value="1632139291" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="feat/blocks" />
-                    <option name="lastUsedInstant" value="1632137483" />
+                    <option name="branchName" value="feature/control-statements" />
+                    <option name="lastUsedInstant" value="1635239946" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1632137482" />
+                    <option name="lastUsedInstant" value="1635239815" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/dice" />
+                    <option name="lastUsedInstant" value="1635239735" />
                   </RecentBranch>
                 </list>
               </option>
