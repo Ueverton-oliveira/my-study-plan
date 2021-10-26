@@ -108,7 +108,7 @@ class AboutControlStatements < Neo::Koan
       i += 1
     end
 
-    assert_equal __, result
+    assert_equal 2, result
   end
 
   def test_next_statement
