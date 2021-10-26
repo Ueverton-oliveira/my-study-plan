@@ -128,7 +128,7 @@ class AboutControlStatements < Neo::Koan
     for item in array
       result << item.upcase
     end
-    assert_equal [__, __, __], result
+    assert_equal ['FISH', 'AND', 'CHIPS'], result
   end
 
   def test_times_statement
