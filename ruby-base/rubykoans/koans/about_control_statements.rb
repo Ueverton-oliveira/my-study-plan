@@ -119,7 +119,7 @@ class AboutControlStatements < Neo::Koan
       next if (i % 2) == 0
       result << i
     end
-    assert_equal __, result
+    assert_equal [*(1..10).step(2)], result
   end
 
   def test_for_statement
