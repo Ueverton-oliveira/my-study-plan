@@ -54,7 +54,7 @@ class AboutControlStatements < Neo::Koan
     result = :default_value
     result = :true_value if true
 
-    assert_equal __, result
+    assert_equal :true_value, result
   end
 
   def test_unless_statement
