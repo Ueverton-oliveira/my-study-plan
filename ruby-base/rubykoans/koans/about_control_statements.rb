@@ -98,7 +98,7 @@ class AboutControlStatements < Neo::Koan
       result = result * i
       i += 1
     end
-    assert_equal __, result
+    assert_equal Math.gamma(11).to_int, result
   end
 
   def test_break_statement_returns_values
