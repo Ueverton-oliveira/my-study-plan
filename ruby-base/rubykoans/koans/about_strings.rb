@@ -57,7 +57,7 @@ EOS
 
   def test_plus_will_concatenate_two_strings
     string = "Hello, " + "World"
-    assert_equal __, string
+    assert_equal "Hello, " + "World", string
   end
 
   def test_plus_concatenation_will_leave_the_original_strings_unmodified
