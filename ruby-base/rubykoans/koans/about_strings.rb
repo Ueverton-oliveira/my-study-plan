@@ -64,8 +64,8 @@ EOS
     hi = "Hello, "
     there = "World"
     string = hi + there
-    assert_equal __, hi
-    assert_equal __, there
+    assert_equal "Hello, ", hi
+    assert_equal "World", there
   end
 
   def test_plus_equals_will_concatenate_to_the_end_of_a_string
