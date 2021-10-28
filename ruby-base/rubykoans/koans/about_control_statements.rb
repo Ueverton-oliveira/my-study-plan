@@ -46,15 +46,15 @@ class AboutControlStatements < Neo::Koan
   end
 
   def test_condition_operators
-    assert_equal __, (true ? :true_value : :false_value)
-    assert_equal __, (false ? :true_value : :false_value)
+    assert_equal :true_value, (true ? :true_value : :false_value)
+    assert_equal :false_value, (false ? :true_value : :false_value)
   end
 
   def test_if_statement_modifiers
     result = :default_value
     result = :true_value if true
 
-    assert_equal __, result
+    assert_equal :true_value, result
   end
 
   def test_unless_statement
@@ -62,7 +62,7 @@ class AboutControlStatements < Neo::Koan
     unless false    # same as saying 'if !false', which evaluates as 'if true'
       result = :false_value
     end
-    assert_equal __, result
+    assert_equal :false_value, result
   end
 
   def test_unless_statement_evaluate_true
@@ -70,14 +70,14 @@ class AboutControlStatements < Neo::Koan
     unless true    # same as saying 'if !true', which evaluates as 'if false'
       result = :true_value
     end
-    assert_equal __, result
+    assert_equal :default_value, result
   end
 
   def test_unless_statement_modifier
     result = :default_value
     result = :false_value unless false
 
-    assert_equal __, result
+    assert_equal :false_value, result
   end
 
   def test_while_statement
@@ -87,7 +87,7 @@ class AboutControlStatements < Neo::Koan
       result = result * i
       i += 1
     end
-    assert_equal __, result
+    assert_equal (1..10).inject {|a,b| a*=b}, result
   end
 
   def test_break_statement
@@ -98,7 +98,7 @@ class AboutControlStatements < Neo::Koan
       result = result * i
       i += 1
     end
-    assert_equal __, result
+    assert_equal Math.gamma(11).to_int, result
   end
 
   def test_break_statement_returns_values
@@ -108,7 +108,7 @@ class AboutControlStatements < Neo::Koan
       i += 1
     end
 
-    assert_equal __, result
+    assert_equal 2, result
   end
 
   def test_next_statement
@@ -119,7 +119,7 @@ class AboutControlStatements < Neo::Koan
       next if (i % 2) == 0
       result << i
     end
-    assert_equal __, result
+    assert_equal [*(1..10).step(2)], result
   end
 
   def test_for_statement
@@ -128,7 +128,7 @@ class AboutControlStatements < Neo::Koan
     for item in array
       result << item.upcase
     end
-    assert_equal [__, __, __], result
+    assert_equal ['FISH', 'AND', 'CHIPS'], result
   end
 
   def test_times_statement
