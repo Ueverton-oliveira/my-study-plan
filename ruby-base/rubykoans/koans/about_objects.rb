@@ -45,6 +45,6 @@ class AboutObjects < Neo::Koan
     copy = obj.clone
 
     assert_equal false, obj           != copy
-    assert_equal __, obj.object_id != copy.object_id
+    assert_equal false, obj.object_id != copy.object_id
   end
 end
