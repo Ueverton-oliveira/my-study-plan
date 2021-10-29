@@ -15,7 +15,7 @@ class AboutObjects < Neo::Koan
   end
 
   def test_objects_can_be_inspected
-    assert_equal __, 123.inspect
+    assert_equal "123", 123.inspect
     assert_equal __, nil.inspect
   end
 
