@@ -33,7 +33,7 @@ class AboutObjects < Neo::Koan
   def test_small_integers_have_fixed_ids
     assert_equal 1, 0.object_id
     assert_equal 3, 1.object_id
-    assert_equal __, 2.object_id
+    assert_equal 5, 2.object_id
     assert_equal __, 100.object_id
 
     # THINK ABOUT IT:
