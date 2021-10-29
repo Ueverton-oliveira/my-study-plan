@@ -5,7 +5,7 @@ class AboutObjects < Neo::Koan
     assert_equal true, 1.is_a?(Object)
     assert_equal true, 1.5.is_a?(Object)
     assert_equal true, "string".is_a?(Object)
-    assert_equal __, nil.is_a?(Object)
+    assert_equal true, nil.is_a?(Object)
     assert_equal __, Object.is_a?(Object)
   end
 
