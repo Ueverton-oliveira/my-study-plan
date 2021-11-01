@@ -7,7 +7,7 @@ class AboutKeywordArguments < Neo::Koan
   end
 
   def test_keyword_arguments
-    assert_equal __, method_with_keyword_arguments.class
+    assert_equal Array, method_with_keyword_arguments.class
     assert_equal __, method_with_keyword_arguments
     assert_equal __, method_with_keyword_arguments(one: 'one')
     assert_equal __, method_with_keyword_arguments(two: 2)
