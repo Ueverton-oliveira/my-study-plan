@@ -41,7 +41,7 @@ class AboutExceptions < Neo::Koan
     end
 
     assert_equal :exception_handled, result
-    assert_equal __, ex.message
+    assert_equal 'My Message', ex.message
   end
 
   def test_ensure_clause
