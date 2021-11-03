@@ -22,7 +22,7 @@ class AboutExceptions < Neo::Koan
 
     assert_equal :exception_handled, result
 
-    assert_equal __, ex.is_a?(StandardError), "Should be a Standard Error"
+    assert_equal true, ex.is_a?(StandardError), "Should be a Standard Error"
     assert_equal __, ex.is_a?(RuntimeError),  "Should be a Runtime Error"
 
     assert RuntimeError.ancestors.include?(StandardError),
