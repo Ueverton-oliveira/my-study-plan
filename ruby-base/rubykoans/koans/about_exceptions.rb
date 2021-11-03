@@ -40,7 +40,7 @@ class AboutExceptions < Neo::Koan
       result = :exception_handled
     end
 
-    assert_equal __, result
+    assert_equal :exception_handled, result
     assert_equal __, ex.message
   end
 

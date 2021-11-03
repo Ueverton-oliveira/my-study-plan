@@ -30,12 +30,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/keyword_arguments" />
-                    <option name="lastUsedInstant" value="1635757910" />
+                    <option name="branchName" value="feat/exceptions" />
+                    <option name="lastUsedInstant" value="1635930687" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1635757580" />
+                    <option name="lastUsedInstant" value="1635930575" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/keyword_arguments" />
+                    <option name="lastUsedInstant" value="1635757910" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/object" />
@@ -44,10 +48,6 @@
                   <RecentBranch>
                     <option name="branchName" value="feature/control-statements" />
                     <option name="lastUsedInstant" value="1635239946" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="feature/dice" />
-                    <option name="lastUsedInstant" value="1635239735" />
                   </RecentBranch>
                 </list>
               </option>
