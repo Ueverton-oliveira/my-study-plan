@@ -54,7 +54,7 @@ class AboutExceptions < Neo::Koan
       result = :always_run
     end
 
-    assert_equal __, result
+    assert_equal :always_run, result
   end
 
   # Sometimes, we must know about the unknown
