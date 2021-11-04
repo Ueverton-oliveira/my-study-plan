@@ -150,8 +150,8 @@ class AboutMessagePassing < Neo::Koan
   def test_foo_method_are_caught
     catcher = WellBehavedFooCatcher.new
 
-    assert_equal __, catcher.foo_bar
-    assert_equal __, catcher.foo_baz
+    assert_equal "Foo to you too", catcher.foo_bar
+    assert_equal "Foo to you too", catcher.foo_baz
   end
 
   def test_non_foo_messages_are_treated_normally
