@@ -39,7 +39,7 @@ class AboutModules < Neo::Koan
 
   def test_normal_methods_are_available_in_the_object
     fido = Dog.new
-    assert_equal __, fido.bark
+    assert_equal "WOOF", fido.bark
   end
 
   def test_module_methods_are_also_available_in_the_object
