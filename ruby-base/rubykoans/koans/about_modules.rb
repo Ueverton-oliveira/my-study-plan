@@ -58,6 +58,6 @@ class AboutModules < Neo::Koan
 
   def test_classes_can_override_module_methods
     fido = Dog.new
-    assert_equal __, fido.here
+    assert_equal :in_object, fido.here
   end
 end
