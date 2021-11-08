@@ -100,7 +100,7 @@ class AboutSandwichCode < Neo::Koan
   end
 
   def test_open_handles_the_file_sandwich_when_given_a_block
-    assert_equal __, count_lines3("example_file.txt")
+    assert_equal 4, count_lines3("example_file.txt")
   end
 
 end
