@@ -29,7 +29,7 @@ class AboutSandwichCode < Neo::Koan
   end
 
   def test_finding_lines
-    assert_equal __, find_line("example_file.txt")
+    assert_equal "test\n", find_line("example_file.txt")
   end
 
   # ------------------------------------------------------------------
