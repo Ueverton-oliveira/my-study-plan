@@ -24,7 +24,7 @@ class AboutTrueAndFalse < Neo::Koan
   def test_everything_else_is_treated_as_true
     assert_equal :true_stuff, truth_value(1)
     assert_equal :true_stuff, truth_value(0)
-    assert_equal __, truth_value([])
+    assert_equal :true_stuff, truth_value([])
     assert_equal __, truth_value({})
     assert_equal __, truth_value("Strings")
     assert_equal __, truth_value("")
