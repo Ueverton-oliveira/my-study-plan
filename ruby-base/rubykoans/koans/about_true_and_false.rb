@@ -18,7 +18,7 @@ class AboutTrueAndFalse < Neo::Koan
   end
 
   def test_nil_is_treated_as_false_too
-    assert_equal __, truth_value(nil)
+    assert_equal :false_stuff, truth_value(nil)
   end
 
   def test_everything_else_is_treated_as_true
