@@ -23,7 +23,7 @@ class AboutNil < Neo::Koan
 
   def test_nil_has_a_few_methods_defined_on_it
     assert_equal true, nil.nil?
-    assert_equal __, nil.to_s
+    assert_equal "", nil.to_s
     assert_equal __, nil.inspect
 
     # THINK ABOUT IT:
