@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8823c5b-3de3-4d18-a974-b5d112597dc1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/rubykoans.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/rubykoans.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f8823c5b-3de3-4d18-a974-b5d112597dc1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +27,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="feature/regular_expressions" />
+                    <option name="lastUsedInstant" value="1637142570" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="feat/true-and-false" />
                     <option name="lastUsedInstant" value="1636460408" />
                   </RecentBranch>
@@ -45,10 +45,6 @@
                   <RecentBranch>
                     <option name="branchName" value="feature/keyword_arguments" />
                     <option name="lastUsedInstant" value="1635757910" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="feature/object" />
-                    <option name="lastUsedInstant" value="1635499636" />
                   </RecentBranch>
                 </list>
               </option>
