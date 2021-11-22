@@ -64,7 +64,7 @@ class AboutRegularExpressions < Neo::Koan
   end
 
   def test_slash_s_is_a_shortcut_for_a_whitespace_character_class
-    assert_equal __, "space: \t\n"[/\s+/]
+    assert_equal '\t\n', "space: \t\n"[/\s+/]
   end
 
   def test_slash_w_is_a_shortcut_for_a_word_character_class
