@@ -60,7 +60,7 @@ class AboutRegularExpressions < Neo::Koan
   end
 
   def test_character_classes_can_include_ranges
-    assert_equal __, "the number is 42"[/[0-9]+/]
+    assert_equal '42', "the number is 42"[/[0-9]+/]
   end
 
   def test_slash_s_is_a_shortcut_for_a_whitespace_character_class
