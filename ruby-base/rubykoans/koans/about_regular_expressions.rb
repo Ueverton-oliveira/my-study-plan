@@ -122,7 +122,7 @@ class AboutRegularExpressions < Neo::Koan
   # ------------------------------------------------------------------
 
   def test_parentheses_also_capture_matched_content_by_number
-    assert_equal __, "Gray, James"[/(\w+), (\w+)/, 1]
+    assert_equal 'Gray', "Gray, James"[/(\w+), (\w+)/, 1]
     assert_equal __, "Gray, James"[/(\w+), (\w+)/, 2]
   end
 
