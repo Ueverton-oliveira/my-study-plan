@@ -128,7 +128,7 @@ class AboutRegularExpressions < Neo::Koan
 
   def test_variables_can_also_be_used_to_access_captures
     assert_equal 'Gray', "Name:  Gray, James"[/(\w+), (\w+)/]
-    assert_equal __, $1
+    assert_equal 'Gray', $1
     assert_equal __, $2
   end
 
