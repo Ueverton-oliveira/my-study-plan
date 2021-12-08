@@ -136,9 +136,9 @@ class AboutRegularExpressions < Neo::Koan
 
   def test_a_vertical_pipe_means_or
     grays = /(James|Dana|Summer) Gray/
-    assert_equal __, "James Gray"[grays]
-    assert_equal __, "Summer Gray"[grays, 1]
-    assert_equal __, "Jim Gray"[grays, 1]
+    assert_equal 'James Gray', "James Gray"[grays]
+    assert_equal 'Summer', "Summer Gray"[grays, 1]
+    assert_equal nil, "Jim Gray"[grays, 1]
   end
 
   # THINK ABOUT IT:
