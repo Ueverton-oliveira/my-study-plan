@@ -10,7 +10,7 @@ class AboutToStr < Neo::Koan
 
   def test_to_s_returns_a_string_representation
     not_like_a_string = CanNotBeTreatedAsString.new
-    assert_equal __, not_like_a_string.to_s
+    assert_equal "non-string-like", not_like_a_string.to_s
   end
 
   def test_normally_objects_cannot_be_used_where_strings_are_expected
