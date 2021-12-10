@@ -14,7 +14,7 @@ class AboutSandwichCode < Neo::Koan
   end
 
   def test_counting_lines
-    assert_equal __, count_lines("example_file.txt")
+    assert_equal 4, count_lines("example_file.txt")
   end
 
   # ------------------------------------------------------------------
