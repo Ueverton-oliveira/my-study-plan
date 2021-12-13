@@ -106,7 +106,7 @@ EOS
 
   def test_double_quoted_string_interpret_escape_characters
     string = "\n"
-    assert_equal __, string.size
+    assert_equal 1, string.size
   end
 
   def test_single_quoted_string_do_not_interpret_escape_characters
