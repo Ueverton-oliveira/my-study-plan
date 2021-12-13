@@ -96,7 +96,7 @@ EOS
     hi = original_string
     there = "World"
     hi << there
-    assert_equal __, original_string
+    assert_equal "Hello, World", original_string
 
     # THINK ABOUT IT:
     #
