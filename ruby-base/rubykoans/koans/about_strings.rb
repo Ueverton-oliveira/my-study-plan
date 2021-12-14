@@ -123,7 +123,7 @@ EOS
   def test_double_quoted_strings_interpolate_variables
     value = 123
     string = "The value is #{value}"
-    assert_equal __, string
+    assert_equal "The value is 123", string
   end
 
   def test_single_quoted_strings_do_not_interpolate
