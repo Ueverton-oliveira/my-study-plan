@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="696c236b-937a-4304-8c65-ddd3cbdfad80" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruby-base/rubykoans/koans/about_strings.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ruby-base/rubykoans/koans/about_strings.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +12,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/java-interop" />
+        <entry key="$PROJECT_DIR$" value="refactor/string" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,8 +26,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="refactor/string" />
+                    <option name="lastUsedInstant" value="1639405738" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1639137768" />
+                    <option name="lastUsedInstant" value="1639405713" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/string" />
+                    <option name="lastUsedInstant" value="1639405484" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/java-interop" />
@@ -36,10 +44,6 @@
                   <RecentBranch>
                     <option name="branchName" value="feature/about-str" />
                     <option name="lastUsedInstant" value="1639043122" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="feature/regular-expression" />
-                    <option name="lastUsedInstant" value="1638954905" />
                   </RecentBranch>
                 </list>
               </option>
@@ -76,6 +80,7 @@
       <updated>1638954796452</updated>
       <workItem from="1638954798625" duration="640000" />
       <workItem from="1639137425432" duration="556000" />
+      <workItem from="1639472838377" duration="313000" />
     </task>
     <servers />
   </component>
