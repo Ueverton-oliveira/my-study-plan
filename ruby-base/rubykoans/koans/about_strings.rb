@@ -161,8 +161,8 @@ EOS
 
   in_ruby_version("1.9", "2") do
     def test_in_modern_ruby_single_characters_are_represented_by_strings
-      assert_equal __, ?a
-      assert_equal __, ?a == 97
+      assert_equal 'a', ?a
+      assert_equal false, ?a == 97
     end
   end
 
@@ -175,7 +175,7 @@ EOS
   def test_strings_can_be_split_with_different_patterns
     string = "the:rain:in:spain"
     words = string.split(/:/)
-    assert_equal [__, __, __, __], words
+    assert_equal ['Sausage', 'Egg', 'Cheese'], words
 
     # NOTE: Patterns are formed from Regular Expressions.  Ruby has a
     # very powerful Regular Expression library.  We will become
