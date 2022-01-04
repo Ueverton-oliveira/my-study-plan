@@ -184,7 +184,7 @@ EOS
 
   def test_strings_can_be_joined
     words = ["Now", "is", "the", "time"]
-    assert_equal __, words.join(" ")
+    assert_equal "Now is the time", words.join(" "))
   end
 
   def test_strings_are_unique_objects
