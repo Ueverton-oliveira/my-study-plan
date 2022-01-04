@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="696c236b-937a-4304-8c65-ddd3cbdfad80" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ruby-base/rubykoans/koans/about_strings.rb" beforeDir="false" afterPath="$PROJECT_DIR$/ruby-base/rubykoans/koans/about_strings.rb" afterDir="false" />
-    </list>
+    <list default="true" id="696c236b-937a-4304-8c65-ddd3cbdfad80" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

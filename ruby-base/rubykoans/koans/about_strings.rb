@@ -167,9 +167,9 @@ EOS
   end
 
   def test_strings_can_be_split
-    string = "Sausage Egg Cheese"
-    words = string.split
-    assert_equal [__, __, __], words
+    string = "the:rain:in:spain"
+    words = string.split(/:/)
+    assert_equal ['the', 'rain', 'in', 'spain'], words
   end
 
   def test_strings_can_be_split_with_different_patterns
