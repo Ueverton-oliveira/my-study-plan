@@ -167,9 +167,9 @@ EOS
   end
 
   def test_strings_can_be_split
-    string = "Sausage Egg Cheese"
-    words = string.split
-    assert_equal [__, __, __], words
+    string = "the:rain:in:spain"
+    words = string.split(/:/)
+    assert_equal ['the', 'rain', 'in', 'spain'], words
   end
 
   def test_strings_can_be_split_with_different_patterns
@@ -184,12 +184,12 @@ EOS
 
   def test_strings_can_be_joined
     words = ["Now", "is", "the", "time"]
-    assert_equal __, words.join(" ")
+    assert_equal "Now is the time", words.join(" "))
   end
 
   def test_strings_are_unique_objects
 
-    assert_equal __, a           == b
-    assert_equal __, a.object_id == b.object_id
+    assert_equal true, a           == b
+    assert_equal false, a.object_id == b.object_id
   end
 end
