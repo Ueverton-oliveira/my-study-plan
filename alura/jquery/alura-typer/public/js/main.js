@@ -8,7 +8,7 @@ sizeWords.text(numberWords);
 
 var campoDigitacao = $('.campo-digitacao');
 
-campoDigitacao.on("click", function(){
+campoDigitacao.on("input", function(){
   var conteudo = campoDigitacao.val();
   var quantidadePalavras = conteudo.split(" ").length;
     $("#contador-palavras").text(quantidadePalavras);
