@@ -47,3 +47,13 @@ titulo.addEventListener("click", mostraMensagem);
 function mostraMensagem(){
   console.log("Olá eu fui clicado!");
 }
+
+titulo.addEventListener("click", function (){
+  console.log("Olha só posso chamar uma função anônima.")
+});
+
+//evento de clique no botão
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
+botaoAdicionar.addEventListener("click", function(){
+  console.log("Oi, cliquei no botão.");
+});
