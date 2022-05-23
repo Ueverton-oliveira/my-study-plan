@@ -1,0 +1,38 @@
+Index: alura/javascript/introducao-javascript/js/form.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//evento de clique no botão\nvar botaoAdicionar = document.querySelector(\"#adicionar-paciente\");\nbotaoAdicionar.addEventListener(\"click\", function(event){\n  event.preventDefault();\n\n  var form = document.querySelector(\"#form-adiciona\");\n\n  var paciente = obtemPacienteDoFormulario(form);\n\n\n  var pacienteTr = document.createElement(\"tr\");\n\n  var nomeTd = document.createElement(\"td\");\n  var pesoTd = document.createElement(\"td\");\n  var alturaTd = document.createElement(\"td\");\n  var gorduraTd = document.createElement(\"td\");\n  var imcTd = document.createElement(\"td\");\n\n\n  nomeTd.textContent = nome;\n  pesoTd.textContent = peso;\n  alturaTd.textContent = altura;\n  gorduraTd.textContent = gordura;\n\n  //appendChild: adiciona como filho o elemento passado a ela como parâmetro\n  pacienteTr.appendChild(nomeTd);\n  pacienteTr.appendChild(pesoTd);\n  pacienteTr.appendChild(alturaTd);\n  pacienteTr.appendChild(gorduraTd);\n\n  var tabela = document.querySelector(\"#tabela-pacientes\");\n\n  tabela.appendChild(pacienteTr);\n\n  function obtemPacienteDoFormulario(form) {\n\n    var paciente = {\n      nome: form.nome.value,\n      peso: form.peso.value,\n      altura: form.altura.value,\n      gordura: form.gordura.value\n    }\n    return paciente;\n  }\n});
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/alura/javascript/introducao-javascript/js/form.js b/alura/javascript/introducao-javascript/js/form.js
+--- a/alura/javascript/introducao-javascript/js/form.js	(revision e1f1937fc6f38dfc51870bf22159269710a7c7fd)
++++ b/alura/javascript/introducao-javascript/js/form.js	(date 1653338512383)
+@@ -32,14 +32,15 @@
+ 
+   tabela.appendChild(pacienteTr);
+ 
+-  function obtemPacienteDoFormulario(form) {
++});
++
++function obtemPacienteDoFormulario(form) {
+ 
+-    var paciente = {
+-      nome: form.nome.value,
+-      peso: form.peso.value,
+-      altura: form.altura.value,
+-      gordura: form.gordura.value
+-    }
+-    return paciente;
+-  }
+-});
+\ No newline at end of file
++  var paciente = {
++    nome: form.nome.value,
++    peso: form.peso.value,
++    altura: form.altura.value,
++    gordura: form.gordura.value
++  }
++  return paciente;
++}
+\ No newline at end of file
