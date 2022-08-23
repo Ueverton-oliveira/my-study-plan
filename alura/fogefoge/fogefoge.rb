@@ -3,7 +3,7 @@ require_relative 'ui'
 def le_mapa(numero)
   arquivo = "mapa#{numero}.txt"
   texto = File.read arquivo
-  mapa = texto.split "\n"
+  mapa = texto.split
 end
 
 def encontra_jogador(mapa)
