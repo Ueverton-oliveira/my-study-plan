@@ -40,4 +40,6 @@ result.then(Add3)
 #  result.transitions.first.keys
 #  ap result.transitions[0]
 
+SumAndAdd3 = Micro::Cases.flow([Sum, Add3])
+
 binding.pry
