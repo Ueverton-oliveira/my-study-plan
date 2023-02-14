@@ -5,6 +5,7 @@ gemfile do
   source 'https://rubygems.org'
   gem 'u-case', '~> 4.2.1'
   gem 'pry'
+  gem 'awesome_print'
 end
 
 class Sum < Micro::Case
@@ -19,6 +20,24 @@ class Sum < Micro::Case
   end
 end
 
+class Add3 < Micro::Case
+  attributes :number
+
+  def call!
+    if number.is_a?(Numeric)
+      Success(result: { number: number + 3 })
+    else
+      Failure(:number_must_be_numerics)
+    end
+  end
+end
+
 result = Sum.call(a:1, b:2)
+result.then(Add3)
+
+# ap result.transitions
+# result.transitions.class
+#  result.transitions.first.keys
+#  ap result.transitions[0]
 
 binding.pry
