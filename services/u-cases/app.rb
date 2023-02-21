@@ -30,6 +30,7 @@ class Add3 < Micro::Case
       Failure(:number_must_be_numerics)
     end
   end
+
 end
 
 result = Sum.call(a:1, b:2)
