@@ -21,6 +21,7 @@ class Sum < Micro::Case
   end
 end
 
+
 class Add3 < Micro::Case
   attributes :number
 
