@@ -1,0 +1,88 @@
+Vimos algumas formas de utilizar nossa struct. Mas para entender um pouco mais a fundo o conceito de ponteiro, faremos um teste juntos.
+
+Selecionaremos todo o código a partir de contaDaBruna := ContaCorrente{"Bruna", 222, 111222, 200} até embaixo, vamos segurar a tecla "Command" e pressionar a barra "//". Assim comentaremos esse trecho do código e ele não será mais executado.
+
+Tiraremos apenas o comentário de fmt.Println(contaDoGuilherme), pois queremos exibi-lo. Se salvarmos, não teremos nenhuma mensagem de erro, pois a criação de contaDoGuilherme já tinha sido feita anteriormente.
+
+Agora criaremos outra conta. Vamos copiar a variável contaDoGuilherme com todas as informações de campos e chamar a duplicata de contaDoGuilherme2
+
+contaDoGuilherme := ContaCorrente{titular: "Guilherme", numeroAgencia: 589, numeroConta: 123456, saldo: 125.5}
+
+contaDoGuilherme2 := ContaCorrente{titular: "Guilherme", numeroAgencia: 589, numeroConta: 123456, saldo: 125.5}COPIAR CÓDIGO
+Vamos salvar o código e veremos uma mensagem de erro nos dizendo que contaDoGuilherme2 foi usada mas não foi declarada. Podemos resolver isso acrescentando a variável à exibição em fmt.Println(contaDoGuilherme, contaDoGuilherme2).
+
+Salvaremos e rodaremos no terminal com go run main.go. Será impresso o conteúdo de ambas as contas, que é o mesmo. Mas não queremos exibir o conteúdo. Vamos comparar se elas de fato são iguais, e para isso usaremos o sinal de "==".
+
+`fmt.Println(contaDoGuilherme == contaDoGuilherme2)``
+
+Limparemos o terminal mais uma vez e quando executarmos, teremos como resposta a palavra "true", que significa "verdadeiro" em Inglês. Então, por mais que eu tenha um apartamento com um conteúdo e tenha outro apartamento com o mesmo conteúdo, o Go é inteligente o bastante para entender que não estamos tentando saber se as informações se referem a uma conta (apartamento) ou outra. Ele compara o conteúdo de ambos e avisa que o resultado da comparação é verdadeiro.
+
+Mas vamos mudar um valor. Colocaremos "580" no numeroAgencia de contaDoGuilherme2, deixando "589" em contaDoGuilherme. Rodaremos a comparação novamente e dessa vez aparecerá a mensagem "false" no terminal, ou seja, falso, pois com a alteração não é mais verdadeiro que o conteúdo das duas variáveis é comparável.
+
+Então, como fizemos esse procedimento de comparação para contaDoGuilherme, faremos o mesmo para contaDaBruna. Comentaremos os trechos do código referentes a contaDoGuilherme, apagaremos contaDoGuilherme2 e descomentar os demais.
+
+Então, da mesma forma que foi feito anteriormente, no método que passa todos os campos e as informações referentes a eles, criaremos contaDaBruna2 com o mesmo conteúdo da primeira variável e vamos compará-las no print.
+``
+contaDaBruna := ContaCorrente{"Bruna", 222, 111222, 200}
+contaDaBruna2 := ContaCorrente{"Bruna", 222, 111222, 200}
+
+fmt.Println(contaDaBruna == contaDaBruna2)
+}
+COPIAR CÓDIGO
+Vamos executar o código e o terminal exibirá "true", já que o conteúdo de ambas as variáveis é igual. Se trocarmos o Número da Conta de contaDaBruna para "111" no lugar de "222", mantendo o de contaDaBruna2, e rodarmos novamente, aparecerá a palavra "false" no terminal, porque os conteúdos dos endereços agora são diferentes.
+
+Então, o modo Go de escrever o código utilizando o sinal de dois pontos e igual (:=) e a ContaCorrente{} (com conteúdo entre chaves) entende que quando fazemos uma comparação queremos levar em comparação o conteúdo dos apartamentos.
+
+Substituiremos a impressão por contaDoGuilherme e depois comentaremos.
+
+// fmr.Print(contaDoGuilherme)
+
+Agora faremos o mesmo para contaDaCris. Primeiramente criaremos contaDaCris2. Por fim, compararemos ambas as contas e imprimiremos o resultado.
+
+var contaDaCris *ContaCorrente
+contaDaCris = new(ContaCorrente)
+contaDaCris.titular = "Cris"
+contaDaCris.titular = 500
+
+var contaDaCris2 *ContaCorrente
+contaDaCris2 = new(ContaCorrente)
+contaDaCris2.titular = "Cris"
+contaDaCris2.titular = 500
+
+fmt.Println(contaDaCris == contaDaCris2)COPIAR CÓDIGO
+Salvaremos o código e vamos executar. No entanto, aparecerá no terminal que isso é falso, diferentemente dos outros dois casos em que havendo o mesmo conteúdo nos campos das contas, a comparação era verdadeira.
+
+Podemos exibir o conteúdo de ambas:
+
+fmt.Println(contaDaCris)
+fmt.Println(contaDaCris2)COPIAR CÓDIGO
+No terminal, os valores exibidos serão exatamente os mesmos para ambas, &(Cris 0 0 500}. Entretanto, a comparação é falsa de todo modo. Ele mesmo dá a dica, mostrando o & na frente de cada um dos conjuntos de valores, pois se tratam de endereços diferentes. Vamos pegar apenas o conteúdo desses endereços para comparar.
+
+var contaDaCris *ContaCorrente
+contaDaCris = new(ContaCorrente)
+contaDaCris.titular = "Cris"
+contaDaCris.titular = 500
+
+var contaDaCris2 *ContaCorrente
+contaDaCris2 = new(ContaCorrente)
+contaDaCris2.titular = "Cris"
+contaDaCris2.saldo = 500
+
+fmt.Println(contaDaCris)
+fmt.Println(contaDaCris2)
+
+fmt.Println(*contaDaCris == *contaDaCris2)COPIAR CÓDIGO
+Agora, mesmo mostrando que os endereços são diferentes, o resultado será que os conteúdos são iguais, com verdadeiro para a comparação no terminal. Poderemos visualizar também o endereço, colocando o & no início de ambas as variáveis na hora de exibi-las.
+
+fmt.Println(&contaDaCris)
+fmt.Println(&contaDaCris2)
+
+fmt.Println(*contaDaCris == *contaDaCris2)COPIAR CÓDIGO
+Agora será mostrado o local na memória do computador onde a conta estará, um valor complexo, que mistura números e letras, com o final "e020" para contaDaCris, outro com final "e028" para contadaCris2. Sendo "20" e "28" números diferentes, os endereços são diferentes. Se uma casa é a número 20 e a outra número 28, por mais que sejam iguais, tenham o mesmo tamanho e mobília, são casas diferentes.
+
+Só que quando comparamos os conteúdos de ambos os endereços, eles serão iguais. Essas questões servem para aprofundarmos nosso conhecimento quanto aos ponteiros.
+
+Os ponteiros são muito utilizados em linguagens como C e C++ e trabalhar com eles é um grande desafio. O maior benefício de sabermos a diferença entre endereços que alocam informações na memória estará no autodesempenho, ou seja as pessoas que que usam C e C++ conseguem ter um alto desempenho dessa forma, com boa velocidade.
+
+Felizmente no Go vimos que a linguagem tem a capacidade de comparar o conteúdo armazenado em dois endereços independentemente da diferença entre eles.
+
