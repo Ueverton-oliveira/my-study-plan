@@ -2,31 +2,35 @@ package main
 
 import "fmt"
 
-type ContaCorrente struct {
-	titular       string
-	numeroAgencia int
-	numeroConta   int
-	saldo         float64
+type CurrentAccount struct {
+	holder        string
+	numberBank    int
+	numberAccount int
+	balance       float64
 }
 
-func (c *ContaCorrente) Sacar(valorDoSaque float64) string {
-	podeSacar := valorDoSaque > 0 && valorDoSaque <= c.saldo
-	if podeSacar {
-		c.saldo -= valorDoSaque
+func (c *CurrentAccount) Withdraw(withdrawValue float64) string {
+	permitWithdraw := withdrawValue > 0 && withdrawValue <= c.balance
+	if permitWithdraw {
+		c.balance -= withdrawValue
 		return "Saque realizado com sucesso"
 	} else {
 		return "Saldo insuficiente"
 	}
 }
 
+func (c *CurrentAccount) Deposit(depositValue float64) {
+	c.balance += depositValue
+}
+
 func main() {
-	contaDaSilvia := ContaCorrente{}
-	contaDaSilvia.titular = "Silvia"
-	contaDaSilvia.saldo = 500
+	contaDaSilvia := CurrentAccount{}
+	contaDaSilvia.holder = "Silvia"
+	contaDaSilvia.balance = 500
 
-	fmt.Println(contaDaSilvia.saldo)
+	fmt.Println(contaDaSilvia.balance)
 
-	fmt.Println(contaDaSilvia.Sacar(500))
-	fmt.Println(contaDaSilvia.saldo)
+	fmt.Println(contaDaSilvia.Withdraw(500))
+	fmt.Println(contaDaSilvia.balance)
 
 }
